@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>ConversionServlet</servlet-name>
+  	<display-name>ConversionServlet</display-name>
+  	<description></description>
+  	<servlet-class>stmichel.ConversionServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>convert</servlet-name>
+  	<display-name>convert</display-name>
+  	<description></description>
+  	<servlet-class>stmichel.convert</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ConversionServlet</servlet-name>
+  	<url-pattern>/ConversionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>convert</servlet-name>
+  	<url-pattern>/convert</url-pattern>
+  </servlet-mapping>
+</web-app>
