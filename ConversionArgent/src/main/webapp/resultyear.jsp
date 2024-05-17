@@ -1,23 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Résultat des Jours Fériés</title>
+<title>RÃ©sultat des Jours FÃ©riÃ©s</title>
 </head>
 <body>
-    <h1>Jours Fériés pour l'année <%= request.getAttribute("annee") %></h1>
-    <ul>
-        <% Map<String, String> joursFeries = (Map<String, String>) request.getAttribute("joursFeries");
-           if (joursFeries != null) {
-               for (Map.Entry<String, String> entry : joursFeries.entrySet()) {
-                   out.println("<li>" + entry.getKey() + ": " + entry.getValue() + "</li>");
-               }
-           } else {
-               out.println("<p>Aucun jour férié trouvé ou erreur dans la récupération des données.</p>");
-           }
-        %>
-    </ul>
-    <a href="index.jsp">Retour</a>
+	<h1>
+		Jours FÃ©riÃ©s pour l'annÃ©e
+		<%=request.getAttribute("annee")%></h1>
+	<ul>
+		<c:forEach var="entry" items="${joursFeries}">
+			<li>${entry.key}: ${entry.value}</li>
+		</c:forEach>
+		%>
+	</ul>
+	<a href="index.jsp">Retour</a>
 </body>
 </html>

@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class JoursFeriesService {
 
-    private static final String API_URL = "https://jours-feries-france.antoine-augusti.fr/api/";
+    private static final String API_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json";
 
     public Map<String, String> getJoursFeries(int annee) {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
