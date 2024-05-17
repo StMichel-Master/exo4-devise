@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>stmichel.convert</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>JoursFeriesServlet</servlet-name>
+  	<display-name>JoursFeriesServlet</display-name>
+  	<description></description>
+  	<servlet-class>stmichel.JoursFeriesServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ConversionServlet</servlet-name>
   	<url-pattern>/ConversionServlet</url-pattern>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>convert</servlet-name>
   	<url-pattern>/convert</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>JoursFeriesServlet</servlet-name>
+  	<url-pattern>/JoursFeriesServlet</url-pattern>
   </servlet-mapping>
 </web-app>
